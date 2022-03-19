@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-18T08:21:35Z" name="Suite" finished-at="2022-03-18T08:21:35Z" duration-ms="274">
+    <groups>
+    </groups>
+    <test started-at="2022-03-18T08:21:35Z" name="Test" finished-at="2022-03-18T08:21:35Z" duration-ms="274">
+      <class name="testrunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:testrunner.TestRunner@1613674b]" started-at="2022-03-18T08:21:35Z" name="setUpClass" finished-at="2022-03-18T08:21:35Z" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@1613674b]" started-at="2022-03-18T08:21:35Z" name="tearDownClass" finished-at="2022-03-18T08:21:35Z" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testrunner.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
