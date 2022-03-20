@@ -33,8 +33,9 @@ public class ContactPage {
 		surnameText.sendKeys(surnameRand);
 		emailText.sendKeys(emailRand);
 		telephoneText.sendKeys(telephone);
-		control.wait(2);
 		messageText.sendKeys(message);
+		control.wait(2);
+		control.takeScreenshot();
 		submitButton.click();
 		control.wait(20);
 	}
@@ -43,10 +44,10 @@ public class ContactPage {
 		control.waitForPageToLoad(60);
 		if (verifyMessage.isExist(120)==true) {
 			successMsg = verifyMessage.getText();
-			Log.setTestStepPassed("Event '" + successMsg + "' is successfully submitted.");
+			Log.setTestStepPassed("Feedback message '" + successMsg + "' is displayed.");
 			control.takeScreenshot();
 		} else {
-			Log.setTestStepFailed("Event '" + successMsg + "' is not successfully submitted.");
+			Log.setTestStepFailed("Feedback message '" + successMsg + "' is not displayed.");
 		}
 		
 	}

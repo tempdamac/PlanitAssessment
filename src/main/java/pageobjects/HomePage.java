@@ -16,7 +16,7 @@ public class HomePage {
 	WebControl control = new WebControl();
 	
 	public Element navigationTab (String tabName) {
-		return new Element("Home Page Tab", By.xpath("//a[contains(text(),'"+tabName+"')]"));
+		return new Element(tabName+ " Tab", By.xpath("//a[contains(text(),'"+tabName+"')]"));
 	}
 	
 	public void goToLoginPage() {

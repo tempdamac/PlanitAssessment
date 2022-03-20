@@ -46,23 +46,23 @@ public class CartPage {
 					if (productName.equals(cartProductName(row).getText())) {
 						Log.setTestStepPassed("Added product '"+productName+"' is the same "
 								+ "from cart product '"+cartProductName(row).getText()+"'");
-						control.takeScreenshot();
 					} else {
 						Log.setTestStepFailed("Added product '"+productName+"' is not the same "
 								+ "from cart product '"+cartProductName(row).getText()+"'");
 					}
+					
 					String cartQty = cartProductQty(row).getAttribute("value");
 					// Verify product quantity
 					if (quantity.equals(cartQty)) {
 						Log.setTestStepPassed("Added product quantity '"+quantity+"' is the same "
 								+ "from cart product quantity '"+cartQty+"'");
-						control.takeScreenshot();
 					} else {
 						Log.setTestStepFailed("Added product quantity '"+quantity+"' is not the same "
 								+ "from cart product quantity '"+cartQty+"'");
 					}
 				}
 			}
+			control.takeScreenshot();
 		} else {
 			if (productValue.contains(">")) {
 				String[] product = productValue.split(">");
@@ -72,7 +72,6 @@ public class CartPage {
 				// Verify product name
 				if (productName.equals(cartProductName(0).getText())) {
 					Log.setTestStepPassed("Added product "+productName+" is the same from cart product "+cartProductName(0).getText());
-					control.takeScreenshot();
 				} else {
 					Log.setTestStepFailed("Added product "+productName+" is not the same from cart product "+cartProductName(0).getText());
 				}
@@ -81,11 +80,11 @@ public class CartPage {
 				if (quantity.equals(cartProductQty(1).getValue())) {
 					Log.setTestStepPassed("Added product quantity "+quantity+" is the same "
 							+ "from cart product quantity "+cartProductName(1).getValue());
-					control.takeScreenshot();
 				} else {
 					Log.setTestStepFailed("Added product quantity "+quantity+" is not the same "
 							+ "from cart product quantity "+cartProductName(1).getValue());
 				}
+				control.takeScreenshot();
 			}
 		}
 	}
@@ -113,13 +112,13 @@ public class CartPage {
 					if (intQty*intPrice == intSubTotal) {
 						Log.setTestStepPassed("Product '"+productName+"' with quantity '"+intQty+"' "
 								+ "each price at '"+intPrice+"' has a subtotal of '"+intSubTotal+"'");
-						control.takeScreenshot();
 					} else {
 						Log.setTestStepFailed("Product '"+productName+"' with quantity '"+intQty+"' "
 								+ "each price at '"+intPrice+"' has a mismatch on subtotal of '"+intSubTotal+"'");
 					}
 				}
 			}
+			control.takeScreenshot();
 		} else {
 			if (productValue.contains(">")) {
 				String[] product = productValue.split(">");
@@ -138,11 +137,11 @@ public class CartPage {
 				if (intQty*intPrice == intSubTotal) {
 					Log.setTestStepPassed("Product '"+productName+"' with quantity '"+intQty+"' "
 							+ "each price at '"+intPrice+"' has a subtotal of '"+intSubTotal+"'");
-					control.takeScreenshot();
 				} else {
 					Log.setTestStepFailed("Product '"+productName+"' with quantity '"+intQty+"' "
 							+ "each price at '"+intPrice+"' has a mismatch on subtotal of '"+intSubTotal+"'");
 				}
+				control.takeScreenshot();
 			}
 		}
 	}
